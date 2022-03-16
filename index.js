@@ -8,7 +8,7 @@ app.set('view enine','ejs');
 
 app.get('/', (req, res) => {
   var title = 'Our Home Page';
-	res.render('index', {title:title});
+	res.render('pages/index', {title:title});
 });
 
 
