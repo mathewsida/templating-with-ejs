@@ -1,17 +1,47 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3000
 
-app.set('view enine','ejs');
+app.set('view engine', 'ejs');
 
 
+//this will allow us to serve up static files, CSS, images & JS
+app.use(express.static(__dirname));
 
-app.get('/', (req, res) => {
-  var title = 'Our Home Page';
-	res.render('pages/index', {title:title});
+
+app.get('', (req, res) => {
+  var title = 'Our Home Page'
+  res.render('pages/index', {title:title});
 });
+
+//about us
+app.get('/about-us', (req, res) => {
+  var title = 'Our About Us Page'
+  res.render('pages/about-us', {title:title});
+});
+
+		app.get('/halo1', (req, res) => {
+		  var title = 'Halo Combat Evolved'
+		  res.render('pages/halo', {title:title});
+		});
+		
+		app.get('/halo2', (req, res) => {
+		  var title = 'Halo 2'
+		  res.render('pages/halo2', {title:title});
+		});
+		
+		app.get('/halo3', (req, res) => {
+		  var title = 'Halo 3'
+		  res.render('pages/halo3', {title:title});
+		});
+		
+		app.get('/halo4', (req, res) => {
+		  var title = 'Halo 4'
+		  res.render('pages/halo4', {title:title});
+		});
+
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log('Example app listening on port ${port}');
 });
