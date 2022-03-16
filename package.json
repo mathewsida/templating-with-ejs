@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mathewsida/templating-with-ejs/issues"
   },
-  "homepage": "https://github.com/mathewsida/templating-with-ejs#readme"
+  "homepage": "https://github.com/mathewsida/templating-with-ejs#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
